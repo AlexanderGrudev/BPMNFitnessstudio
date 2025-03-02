@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="approvalDMNq" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.30.0">
+  <decision id="Decision_10tfiqb" name="Decide Loan Approval">
+    <decisionTable id="DecisionTable_0oy31uu">
+      <input id="InputClause_0uhqrm5" label="Erlaubnis" camunda:inputVariable="yearRating">
+        <inputExpression id="LiteralExpression_0779e9l" typeRef="long" />
+      </input>
+      <input id="InputClause_0de8x4w" label="Geburtsjahr" camunda:inputVariable="jahr">
+        <inputExpression id="LiteralExpression_0jhx3h7" typeRef="long">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1w07j63" label="Approval" name="approval" typeRef="boolean" />
+      <rule id="DecisionRule_0w41ohp">
+        <description>Kann sich nicht anmelden</description>
+        <inputEntry id="UnaryTests_00lk510">
+          <text>1</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ehobcc">
+          <text>&gt;= 2007</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0zrytlv">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_01r9lld">
+        <description>Kann sich mit Eltern anmelden</description>
+        <inputEntry id="UnaryTests_00rjvj4">
+          <text>2</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1unozs8">
+          <text>&gt;= 2007</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1pa80lh">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1lpeijl">
+        <description>darf sich anmelden</description>
+        <inputEntry id="UnaryTests_0j0gbus">
+          <text>3</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01zg24c">
+          <text>&lt; 2007</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_139eb4a">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_0ljezyo">
+      <dmndi:DMNShape id="DMNShape_1h6pwls" dmnElementRef="Decision_10tfiqb">
+        <dc:Bounds height="80" width="180" x="160" y="80" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

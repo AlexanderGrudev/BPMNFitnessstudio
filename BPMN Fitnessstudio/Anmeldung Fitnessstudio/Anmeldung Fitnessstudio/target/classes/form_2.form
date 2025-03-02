@@ -1,0 +1,122 @@
+{
+  "components": [
+    {
+      "label": "Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_129g83z",
+        "columns": null
+      },
+      "id": "Field_0m94vlm",
+      "key": "name",
+      "description": "Vorname, Nachname",
+      "readonly": true,
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Kundenstatus",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_00tgb0j",
+        "columns": null
+      },
+      "id": "Field_1eb9lz1",
+      "key": "kunde",
+      "readonly": true,
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Geburtsjahr",
+      "type": "number",
+      "layout": {
+        "row": "Row_0znh9w5",
+        "columns": null
+      },
+      "id": "Field_0p89s6i",
+      "key": "jahr",
+      "description": "Mindestens 2009",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "IBAN",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_18zvs9a",
+        "columns": null
+      },
+      "id": "Field_14zd955",
+      "key": "iban",
+      "defaultValue": "DE",
+      "validate": {
+        "required": true,
+        "minLength": 22,
+        "maxLength": 22
+      }
+    },
+    {
+      "label": "E-Mail",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0486e3p",
+        "columns": null
+      },
+      "id": "Field_0jwi2tu",
+      "key": "email",
+      "validate": {
+        "required": true,
+        "validationType": "email"
+      }
+    },
+    {
+      "label": "Erlaubnis",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1rw3tuf",
+        "columns": null
+      },
+      "id": "Field_0lgow33",
+      "key": "erlaubnis",
+      "validate": {
+        "required": false
+      }
+    },
+    {
+      "label": "Vertragslaufzeit",
+      "values": [
+        {
+          "label": "1 Jahr",
+          "value": "12 Monate"
+        },
+        {
+          "label": "2 Jahre",
+          "value": "24 Monate"
+        }
+      ],
+      "type": "radio",
+      "layout": {
+        "row": "Row_1rw3tuf",
+        "columns": null
+      },
+      "id": "Field_144wctv",
+      "key": "laufzeit",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "anmeldung2",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

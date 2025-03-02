@@ -1,0 +1,14 @@
+camunda:
+  bpm:
+    admin-user:
+      id: demo
+      password: demo  
+    generic-properties:
+      properties:
+        historyTimeToLive: P1D
+
+spring:
+  datasource:
+    url: jdbc:h2:file:../../camundaDB
+#    username: sa
+#    password: password

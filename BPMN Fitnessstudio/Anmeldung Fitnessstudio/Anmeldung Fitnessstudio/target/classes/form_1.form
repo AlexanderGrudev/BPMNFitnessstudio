@@ -1,0 +1,121 @@
+{
+  "components": [
+    {
+      "label": "Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1jfyj2d",
+        "columns": null
+      },
+      "id": "Field_064178c",
+      "key": "name",
+      "description": "Vorname,Nachname",
+      "readonly": "=true",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Kundenstatus",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1mnqlbk",
+        "columns": null
+      },
+      "id": "Field_1w4wve1",
+      "key": "kunde",
+      "readonly": "=true",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Geburtsjahr",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_07fxwyg",
+        "columns": null
+      },
+      "id": "Field_0mm73dr",
+      "key": "jahr",
+      "defaultValue": "2000",
+      "readonly": "=true",
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "IBAN",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1b9f942",
+        "columns": null
+      },
+      "id": "Field_0nhwkf7",
+      "key": "iban",
+      "defaultValue": "DE",
+      "validate": {
+        "required": true,
+        "minLength": 22,
+        "maxLength": 22
+      }
+    },
+    {
+      "label": "E-Mail",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1ntv9o5",
+        "columns": null
+      },
+      "id": "Field_1ea6b1u",
+      "key": "email",
+      "defaultValue": "ag805410@fh-muenster.de",
+      "validate": {
+        "required": true,
+        "validationType": "email"
+      }
+    },
+    {
+      "label": "Erlaubnis",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0x39tl1",
+        "columns": null
+      },
+      "id": "Field_0brkxxd",
+      "key": "erlaubnis"
+    },
+    {
+      "label": "Laufzeit",
+      "values": [
+        {
+          "label": "1 Jahr",
+          "value": "12 Monate"
+        },
+        {
+          "label": "2 Jahre",
+          "value": "24 Monate"
+        }
+      ],
+      "type": "radio",
+      "layout": {
+        "row": "Row_0x39tl1",
+        "columns": null
+      },
+      "id": "Field_1w47v20",
+      "key": "laufzeit",
+      "validate": {
+        "required": true
+      }
+    }
+  ],
+  "type": "default",
+  "id": "anmeldung",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}
